@@ -58,10 +58,10 @@ def descripcion():
 
 def estado():
     estado_tarea = ''
-    estado_entrada = input("Ingresa el estado de tu tarea COMPLETADO O PENDIENTE: ").lower()
+    estado_entrada = input("Ingresa el estado de tu tarea COMPLETADA O PENDIENTE: ").lower()
     is_boolean = True
     
-    if estado_entrada == 'completado' or estado_entrada == 'pendiente':
+    if estado_entrada == 'completada' or estado_entrada == 'pendiente':
         estado_tarea = estado_entrada
         is_boolean = False
         return estado_tarea
@@ -70,7 +70,7 @@ def estado():
         print("Ingresa un estado valido; ya sea completado o pendiente")
         estado_entrada = input("Ingresa nuevamente tu estado correctamente: ")
         
-        if estado_entrada == 'completado' or estado_entrada == 'pendiente':
+        if estado_entrada == 'completada' or estado_entrada == 'pendiente':
          estado_tarea = estado_entrada
          is_boolean = False
          return estado_tarea
