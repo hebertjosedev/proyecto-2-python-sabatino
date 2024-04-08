@@ -14,10 +14,6 @@ def filtrar_tareas_titulo(entrada):
 def filtrar_tareas_titulo_nuevo(entrada):
     resultado = [palabra for palabra in tareas_lista if palabra['titulo'][0:3] == entrada[0:3]]
     return resultado
-
-filtrar_tareas_titulo_nuevo('aprender')
-     
-filtrar_tareas_titulo_nuevo('equipos')
      
 def filtrar_tareas_descripcion(entrada):
         if entrada != '':
@@ -42,8 +38,8 @@ def actualizar_tareas_id(entrada):
 def actualizar_tareas_titulo():
     entrada = input("Ingresa tu titulo a actualizar: ")
     
-    while entrada == '':
-        print("El titulo no puede ser un dato vacio")
+    while entrada == '' or len(entrada) > 20:
+        print("El titulo no puede ser un dato vacio o mayor a 20 caracteres")
         entrada = input("Ingresa nuevamente un titulo valido: ")
      
     return entrada
@@ -52,8 +48,8 @@ def actualizar_tareas_descripcion():
     entrada = input("Ingresa tu descripcion a actualizar: ")
     
     while entrada == '':
-        print("El titulo no puede ser un dato vacio")
-        entrada = input("Ingresa nuevamente un titulo valido: ")
+        print("La descripcion no puede ser un dato vacio")
+        entrada = input("Ingresa nuevamente una descripcion valida: ")
      
     return entrada
 

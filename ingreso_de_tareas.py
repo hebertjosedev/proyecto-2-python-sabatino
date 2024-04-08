@@ -30,7 +30,6 @@ def filtrado(id_ingresado):
     elif filtrado != []:
         is_boolean = True
         return is_boolean
-        
             
              
 def titulo():
